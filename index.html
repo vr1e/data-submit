@@ -29,6 +29,13 @@
         vertical-align: top;
         display: inline-block;
         width: 50px;
+        color: white;
+      }
+      .low {
+        background: maroon;
+
+      }
+      .high {
         background: purple;
       }
     </style>
@@ -69,13 +76,13 @@
     <fieldset>
       <legend>Your indicators</legend>
         <label for="height">Height:</label>
-          <span>Short</span>
+          <span class="low">Short</span>
             <input type="range" name="height" min="0" max="100">
-          <span>Tall</span><br>
+          <span class="high">Tall</span><br>
         <label for="salary">Salary:</label>
-          <span>Poor</span>
+          <span class="low">Poor</span>
             <input type="range" name="salary" min="0" max="100">
-          <span>Rich</span>
+          <span class="high">Rich</span>
     </fieldset>
     <fieldset>
       <legend>Your Contact Information</legend>
@@ -85,7 +92,7 @@
           <input type="tel" name="mobile"><br>
         <label for="address">Address:</label>
           <textarea rows="3" cols="60" name="address"></textarea><br>
-        <label for="contact" class="awidth">Method to contact you:</label>
+        <label for="contact">Method to contact you:</label>
           <input type="checkbox" name="contact" value="con-email">Email
           <input type="checkbox" name="contact" value="con-whatsapp">Whatsapp
           <input type="checkbox" name="contact" value="con-chat">In-app chat
