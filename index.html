@@ -9,37 +9,37 @@
   <form action="" method="get" enctype="multipart/form-data">
     <fieldset>
       <legend>Your Face</legend>
-      Your Image: <input type="file" required><br>
-      Image Preview: <img id="preview">
+      <label for="avatar">Your Image:</label> <input type="file" id="avatar" name="avatar" required><br>
+      <label for="preview">Image Preview:</label><img id="preview">
     </fieldset>
     <fieldset>
       <legend>Your General Details</legend>
-      Name: <input type="text" name="name" placeholder="Your Full name" required><br>
-      Gender: <input type="radio" name="gender" value="male" required>Male
+      <label for="name">Name:</name> <input type="text" name="name" placeholder="Your Full name" required><br>
+      <label for="gender">Gender:</label> <input type="radio" name="gender" value="male" required>Male
       <input type="radio" name="gender" value="female">Female<br>
-      Age: <input type="number" name="age" placeholder="18" required><br>
-      Date of birth: <input type="date" name="birth"><br>
-      Favorite color: <input type="color" name="color"><br>
-      Which country: <select name="country">
+      <Age: <input type="number" name="age" placeholder="18" required><br>
+      <label for="birth">Date of birth:</label> <input type="date" name="birth"><br>
+      <label for="color">Favorite color:</label> <input type="color" name="color"><br>
+      <label for="country">Which country:</country> <select name="country">
+        <option value="no-selection"></option>
         <option value="china">China</option>
         <option value="india">India</option>
         <option value="us">United States</option>
         <option value="brazil">Brazil</option>
         <option value="japan">Japan</option>
-        <option>Other</option>
       </select>
     </fieldset>
     <fieldset>
       <legend>Your indicators</legend>
-        Height: Short <input type="range" min="0" max="100"> Tall<br>
-        Salary: Poor<input type="range" min="0" max="100"> Rich
+        <label for="height">Height:</label> Short <input type="range" name="height" min="0" max="100"> Tall<br>
+        <label for="salary">Salary:</salary> Poor<input type="range" name="salary" min="0" max="100"> Rich
     </fieldset>
     <fieldset>
       <legend>Your Contact Information</legend>
-        Email: <input type="email" required><br>
-        Mobile: <input type="tel"><br>
-        Address: <textarea rows="3" cols="60" name="address"></textarea><br>
-        Method to contact you: <input type="checkbox" name="contact" value="con-email">Email
+        <label for="email">Email:</label> <input type="email" name="email" required><br>
+        <label for="mobile">Mobile:</label> <input type="tel" name="mobile"><br>
+        <label for="address">Address:</label> <textarea rows="3" cols="60" name="address"></textarea><br>
+        <label for="contact">Method to contact you:</label> <input type="checkbox" name="contact" value="con-email">Email
         <input type="checkbox" name="contact" value="con-whatsapp">Whatsapp
         <input type="checkbox" name="contact" value="con-chat">In-app chat
     </fieldset>
