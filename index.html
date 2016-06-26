@@ -24,13 +24,13 @@
         width: 360px;
         height: 50px;
       }
-      span {
+      .low, .high {
         text-align: center;
         vertical-align: top;
         display: inline-block;
         width: 50px;
-/*        height: 100%;*/
         color: white;
+        padding: 5px 0 5px 0;
       }
       .low {
         background: maroon;
@@ -38,6 +38,9 @@
       }
       .high {
         background: purple;
+      }
+      label:hover, input:hover, textarea:hover, .active:hover {
+        font-size: 25px;
       }
     </style>
 </head>
@@ -53,17 +56,22 @@
     </fieldset>
     <fieldset>
       <legend>Your General Details</legend>
+      <div class="active">
         <label for="name">Name:</label>
           <input type="text" name="name" placeholder="Your Full name" required><br>
+      </div>
+      <div class="active">
         <label for="gender">Gender:</label>
           <input type="radio" class="awidth" name="gender" value="male" required>Male
           <input type="radio" class="awidth" name="gender" value="female">Female<br>
+      </div>
         <label for="age">Age:</label>
-          <input type="number" name="age" value="18" required><br>
+          <input type="number" name="age" min="1" max="99" step="1" value="18" required><br>
         <label for="birth">Date of birth:</label>
           <input type="date" name="birth"><br>
         <label for="color">Favorite color:</label>
           <input type="color" name="color"><br>
+      <div class="active">
         <label for="country">Which country:</label>
           <select name="country">
             <option value="no-selection"></option>
@@ -73,17 +81,18 @@
             <option value="brazil">Brazil</option>
             <option value="japan">Japan</option>
           </select>
+      </div>
     </fieldset>
     <fieldset>
       <legend>Your indicators</legend>
         <label for="height">Height:</label>
           <span class="low">Short</span>
-            <input type="range" name="height" min="0" max="100">
+            <input type="range" name="height" min="0" max="250" step="5" value="125">
           <span class="high">Tall</span><br>
           </label>
         <label for="salary">Salary:</label>
           <span class="low">Poor</span>
-            <input type="range" name="salary" min="0" max="100">
+            <input type="range" name="salary" min="0" max="3000" step="100" value="1500">
           <span class="high">Rich</span>
     </fieldset>
     <fieldset>
@@ -94,10 +103,12 @@
           <input type="tel" name="mobile"><br>
         <label for="address">Address:</label>
           <textarea rows="3" cols="60" name="address"></textarea><br>
+      <div class="active">
         <label for="contact">Method to contact you:</label>
           <input type="checkbox" name="contact" value="con-email">Email
           <input type="checkbox" name="contact" value="con-whatsapp">Whatsapp
           <input type="checkbox" name="contact" value="con-chat">In-app chat
+      </div>
     </fieldset>
     <input type="submit" value="Submit">
   </form>
